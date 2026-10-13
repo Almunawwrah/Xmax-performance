@@ -1,0 +1,119 @@
+/* XMAX Performance — Design Tokens
+ * Dark, control-room-inspired. High-contrast, dim-environment readable.
+ * No decorative gradients, no fake glass, no faux VU meters.
+ */
+
+:root {
+  /* --- Surfaces (control room, dimmable) --- */
+  --bg-app: #0a0d12;          /* deepest backdrop */
+  --bg-surface: #12161e;      /* panels */
+  --bg-surface-2: #181d27;    /* raised panels / inputs */
+  --bg-surface-3: #1f2530;    /* hover / active row */
+  --bg-inset: #0c0f15;        /* recessed areas (table headers) */
+  --border: #262c38;
+  --border-strong: #353d4d;
+  --border-focus: #4a93ff;
+
+  /* --- Text --- */
+  --text-primary: #e8ecf2;
+  --text-secondary: #a8b1c0;
+  --text-muted: #6b7484;
+  --text-disabled: #444b58;
+  --text-inverse: #0a0d12;
+
+  /* --- Accent (restrained, single accent) --- */
+  --accent: #4a93ff;
+  --accent-hover: #5fa3ff;
+  --accent-active: #3a82ee;
+  --accent-soft: rgba(74, 147, 255, 0.14);
+  --accent-border: rgba(74, 147, 255, 0.45);
+
+  /* --- Status (semantic, consistent) --- */
+  --status-ok: #3ecf8e;
+  --status-ok-soft: rgba(62, 207, 142, 0.14);
+  --status-warn: #f0a93b;
+  --status-warn-soft: rgba(240, 169, 59, 0.14);
+  --status-danger: #e5484d;
+  --status-danger-soft: rgba(229, 72, 77, 0.14);
+  --status-info: #4a93ff;
+  --status-info-soft: rgba(74, 147, 255, 0.14);
+  --status-neutral: #6b7484;
+  --status-neutral-soft: rgba(107, 116, 132, 0.14);
+
+  /* Verification states (signal flow) */
+  --verify-planned: #6b7484;
+  --verify-confirmed: #3ecf8e;
+  --verify-unchecked: #f0a93b;
+  --verify-problem: #e5484d;
+
+  /* --- Typography --- */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", "Menlo", "Consolas", monospace;
+
+  --fs-xs: 11px;
+  --fs-sm: 12px;
+  --fs-base: 13px;
+  --fs-md: 14px;
+  --fs-lg: 16px;
+  --fs-xl: 18px;
+  --fs-2xl: 22px;
+  --fs-3xl: 28px;
+
+  --lh-tight: 1.25;
+  --lh-base: 1.45;
+  --lh-loose: 1.6;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* --- Spacing scale (4px base) --- */
+  --sp-0: 0;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+  --sp-16: 64px;
+
+  /* --- Radii --- */
+  --r-sm: 3px;
+  --r-md: 5px;
+  --r-lg: 8px;
+  --r-pill: 999px;
+
+  /* --- Shadows (subtle, control-room) --- */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+  --shadow-focus: 0 0 0 3px var(--accent-soft);
+
+  /* --- Layout --- */
+  --nav-width: 220px;
+  --nav-width-collapsed: 56px;
+  --content-max: 1400px;
+  --header-h: 48px;
+
+  /* --- Motion (minimal) --- */
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* --- Z-index scale --- */
+  --z-nav: 100;
+  --z-sticky: 200;
+  --z-modal: 1000;
+  --z-toast: 1100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+  }
+}
